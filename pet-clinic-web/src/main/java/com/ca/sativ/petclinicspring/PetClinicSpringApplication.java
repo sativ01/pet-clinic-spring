@@ -1,4 +1,4 @@
-package com.ca.sativ01.petclinicspring;
+package com.ca.sativ.petclinicspring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package com.ca.sativ01.petclinicspring.model;
+package com.ca.sativ.petclinicspring.model;
 
 public class PetType {
     private String name;

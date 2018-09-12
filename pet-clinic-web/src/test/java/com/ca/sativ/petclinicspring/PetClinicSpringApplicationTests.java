@@ -1,4 +1,4 @@
-package com.ca.sativ01.petclinicspring;
+package com.ca.sativ.petclinicspring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
