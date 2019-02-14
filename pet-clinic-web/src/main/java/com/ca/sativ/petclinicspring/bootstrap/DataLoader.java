@@ -1,6 +1,7 @@
 package com.ca.sativ.petclinicspring.bootstrap;
 
 import com.ca.sativ.petclinicspring.model.Owner;
+import com.ca.sativ.petclinicspring.model.Pet;
 import com.ca.sativ.petclinicspring.model.PetType;
 import com.ca.sativ.petclinicspring.model.Vet;
 import com.ca.sativ.petclinicspring.services.OwnerService;
@@ -39,12 +40,19 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("alice");
         owner1.setLastName("anderson");
+        owner1.setAddress("Big City", "Long Street 1", "123-123-123");
+
+        Pet o1Dog1 = new Pet("Bill", dogType);
+        owner1.addPet(o1Dog1);
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("bob");
         owner2.setLastName("brandon");
+        owner2.setAddress("Big City", "Short Street 1", "321-321-321");
+        Pet o2Cat1 = new Pet("Gill", catType);
+        owner2.addPet(o2Cat1);
 
         ownerService.save(owner2);
 

@@ -3,16 +3,37 @@ package com.ca.sativ.petclinicspring.model;
 import java.time.LocalDate;
 
 public class Pet extends BaseEntity{
-    private  PetType perType;
+
+    private String name;
+    private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
 
-    public PetType getPerType() {
-        return perType;
+    public Pet(String name, PetType petType, LocalDate birthDate) {
+        this.name = name;
+        this.petType = petType;
+        this.birthDate = birthDate;
     }
 
-    public void setPerType(PetType perType) {
-        this.perType = perType;
+    public Pet(String name, PetType petType) {
+        this.name = name;
+        this.petType = petType;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public PetType getPetType() {
+        return petType;
+    }
+
+    public void setPetType(PetType petType) {
+        this.petType = petType;
     }
 
     public Owner getOwner() {
