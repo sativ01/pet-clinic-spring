@@ -5,6 +5,9 @@ import java.util.Set;
 
 public class Owner extends Person {
 
+    private Address address;
+    private Set<Pet> pets;
+
     public Owner() {
         super();
         this.pets = new HashSet<>();
@@ -14,8 +17,6 @@ public class Owner extends Person {
         super();
         this.pets = pets;
     }
-
-    private Set<Pet> pets;
 
     public Set<Pet> getPets() {
         return pets;
@@ -31,6 +32,24 @@ public class Owner extends Person {
 
     public void addPets(Set<Pet> pets){
         this.pets.addAll(pets);
+    }
+
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public void setAddress(String city, String street, String telephone) {
+        Address address = new Address();
+        address.setAddress(street);
+        address.setCity(city);
+        address.setTelephone(telephone);
+
+        this.address = address;
     }
 
 }
