@@ -6,10 +6,12 @@ import java.util.Set;
 public class Owner extends Person {
 
     public Owner() {
+        super();
         this.pets = new HashSet<>();
     }
 
     public Owner(Set<Pet> pets) {
+        super();
         this.pets = pets;
     }
 
